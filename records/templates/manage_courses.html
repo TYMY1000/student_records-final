@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Courses for {{ student.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='deets.css') }}">
+</head>
+<body>
+   <h2>Manage Courses for {{ student.name }}</h2>
+<hr>
+<form method="POST">
+    <!-- Existing grades and attendance form -->
+</form>
+
+
+    <!-- Form to Input Grades and Attendance -->
+    <form method="POST">
+        <h2>Select 6 Courses</h2>
+        {% for course in courses %}
+            <label>
+                <input type="checkbox" name="courses" value="{{ course.id }}">
+                {{ course.name }} ({{ course.credits }} units)
+            </label><br>
+        {% endfor %}
+
+        <h2>Input Grades</h2>
+        {% for i in range(6) %}
+            <label>Grade for Course {{ i + 1 }}: </label>
+            <input type="text" name="grades" maxlength="2"><br>
+        {% endfor %}
+
+        <h2>Attendance</h2>
+        {% for i in range(6) %}
+            <label>Attendance for Course {{ i + 1 }}: </label>
+            <select name="attendance">
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+            </select><br>
+        {% endfor %}
+
+        <button type="submit" name="save_grades">Save Grades and Attendance</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('students_list') }}">Back to Students List</a>
+</body>
+</html>

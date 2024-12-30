@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades for {{ student.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='list.css') }}">
+</head>
+<body>
+    <h1>Grades for {{ student.name }}</h1>
+    <table border="1">
+        <tr>
+            <th>Course</th>
+            <th>units</th>
+            <th>Grade</th>
+        </tr>
+        {% for grade, course in grades %}
+        <tr>
+            <td>{{ course.name }}</td>
+            <td>{{ course.credits }}</td>
+            <td>{{ grade.grade }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('students_list') }}">Back to Students List</a>
+</body>
+</html>

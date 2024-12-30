@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(240, 29%, 97%);
+    color: hsl(0, 0%, 10%);
+}
+
+h1 {
+    text-align: center;
+    color: hsl(0, 0%, 10%);
+    margin-top: 20px;
+}
+
+form {
+    background: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+label {
+    display: flex;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    width: 95%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: hsl(204, 70%, 53%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: hsl(204, 64%, 44%);
+}
+
+.success {
+    background-color: hsl(145, 63%, 49%);
+    color: white;
+}
+
+.error {
+    background-color: hsl(6, 78%, 57%);
+    color: white;
+}

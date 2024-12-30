@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsla(240, 33%, 97%, 0.848);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: hsl(0, 0%, 10%);
+    margin-top: 30px;
+}
+
+form {
+    background-color: hsl(0, 0%, 100%);
+    border: 20px solid hsl(0, 0%, 87%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    width: 350px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid hsl(0, 0%, 50%);
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: hsl(211, 100%, 50%);
+}
+
+button {
+    background-color: hsl(211, 62%, 52%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(211, 100%, 35%);
+}
+
+a {
+    color: hsl(211, 100%, 50%);
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a:hover {
+    color: hsl(211, 42%, 62%);
+    text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+    form {
+        width: 90%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 100%);
+}
+
+nav {
+    background-color: hsl(211, 91%, 36%);
+    padding: 10px;
+    margin: 70PX;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: hsl(0, 0%, 55%);
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

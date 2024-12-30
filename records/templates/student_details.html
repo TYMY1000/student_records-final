@@ -1,0 +1,44 @@
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='deets.css') }}">
+<div class="container">
+
+    <h2>Student Details for {{ student.name }}</h2>
+     <p>
+        {% if student.photo %}
+            <img src="{{ url_for('uploaded_file', filename=student.photo) }}" alt="Student Photo" width="100">
+        {% else %}
+            No Photo Available
+        {% endif %}
+    </p>
+    <p>ID: {{ student.id }}</p>
+    <p>Name: {{ student.name }}</p>
+    <p>Age: {{ student.age }}</p>
+    <p>Date of Birth: {{ student.dob }}</p>
+    <p>Gender: {{ student.gender }}</p>
+
+
+    <h3>Courses</h3>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course.name }} (units: {{ course.credits }})</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Attendance</h3>
+    <ul>
+        {% for att in attendance %}
+            <li>{{ att.date }} - {{ att.status }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Grades</h3>
+    <ul>
+        {% for grade in grades %}
+            <li>Grade: {{ grade.grade }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>CGPA: {{ cgpa }}</h3>
+    <a href="/students/list">Back to Student List</a>
+</div>
+{% endblock %}
